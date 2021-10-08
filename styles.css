@@ -1,5 +1,8 @@
 body {
     background-color: #7a7268;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    color: #d2cdc7;
 }
 
 h1 {
@@ -34,4 +37,19 @@ td > img {
     display: block;
     margin: 0 auto;
     width: 100%;
+}
+
+form {
+    margin: 10px;
+    display: inline-block;
+    text-align: justify;
+}
+
+form > * {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+hr {
+    border: 1px solid #d2cdc7;
 }

@@ -3,22 +3,24 @@
     <head>
         <title>Chess!</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="game.js"></script>
     </head>
-    <body>
+    <body onload="init();">
         <h1>Chess</h1>
 
         <table id="board"></table>
-        <script>
-            for (let r = 0; r < 8; r++) {
-                var row = document.createElement("tr");
 
-                for (let c = 0; c < 8; c++) {
-                    var el = document.createElement("td");
-                    row.appendChild(el);
-                }
-
-                document.getElementById("board").appendChild(row);
-            } 
-        </script>
+        <form>
+            <hr/>
+            <input type="url" name="remoteip" placeholder="Remote IP address"/>
+            <input type="button" name="btnconnect" value="Connect to server"/>
+            <hr/>
+            <label>Variation: </label>
+            <select>
+                <option value="Classic">Classic</option>
+            </select>
+            <input type="button" name="btnhost" value="Host a server"/>
+        </form>
+        
     </body>
 </html>
