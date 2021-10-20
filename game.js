@@ -1,4 +1,11 @@
+var socket;
+
 function init() {
+    socket = new WebSocket("ws://127.0.0.1:13254");
+    socket.onopen = function(e) {
+        console.log("Websocket succesfully connected");
+    }
+
     for (let r = 0; r < 8; r++) {
         var row = document.createElement("tr");
 
@@ -9,7 +16,7 @@ function init() {
         }
 
         document.getElementById("board").appendChild(row);
-    } 
+    }
 }
 
 function setTileImg(el, piece) {
@@ -20,4 +27,9 @@ function setTileImg(el, piece) {
 
 function clearTileImg(el) {
     el.innerHTML = "";
+}
+
+function updateUsername() {
+    let data = "uu:"+document.getElementById("username").value;
+    socket.send(data);
 }
