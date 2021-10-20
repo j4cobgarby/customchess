@@ -12,14 +12,20 @@
 
         <form>
             <hr/>
-            <input type="url" name="remoteip" placeholder="Remote IP address"/>
-            <input type="button" name="btnconnect" value="Connect to server"/>
+            <input type="text" id="username" placeholder="Your username"/>
+            <input type="button" onclick="updateUsername();" value="Set username"/>
             <hr/>
             <label>Variation: </label>
-            <select>
+            <select id="variant">
                 <option value="Classic">Classic</option>
             </select>
-            <input type="button" name="btnhost" value="Host a server"/>
+            <br/>
+            <label>Timing: </label>
+            <select id="timing">
+                <option value="Classic">None</option>
+            </select>
+            <br/>
+            <input type="button" id="btnhost" value="Start Game"/>
         </form>
         
     </body>
